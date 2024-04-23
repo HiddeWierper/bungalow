@@ -1,0 +1,441 @@
+body,
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #303030;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 1001;
+}
+
+header h1 {
+  color: white;
+  text-align: left;
+  line-height: 10vh;
+  width: fit-content;
+  margin-left: 2%;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+header ul li {
+  margin: 0 2%;
+  padding: 2% 4%;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+section.items {
+  display: flex;
+  flex-direction: row;
+}
+
+section.introduction {
+  width: 40%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 4%;
+  background-color: white;
+  border-radius: 16px;
+}
+
+section.introduction h2 {
+  color: #2b2b2b;
+  font-size: 2rem;
+}
+
+section.introduction .introduction-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6%;
+}
+
+section.introduction .introduction-content p {
+  column-count: 2;
+  font-size: 1.2rem;
+}
+
+section.photo {
+  width: 40%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 3%;
+  background-color: white;
+  border-radius: 16px;
+}
+
+section.photo h3 {
+  color: #2b2b2b;
+  height: 100%;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+section.photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+section.photo img:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s;
+}
+
+section.bungalows {
+  width: 90%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1fr 1fr);
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 3%;
+  background-color: white;
+  border-radius: 16px;
+}
+
+section.bungalows .item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  margin-bottom: 2%;
+}
+
+section.bungalows .item img {
+  width: 90%;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+section.bungalows .item h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section.bungalows .item ul li {
+  list-style-position: inside;
+  text-indent: 1rem;
+}
+
+section.bungalows .item ul li ul.voorzieningen {
+  list-style-position: inside;
+  padding-left: 1.4rem;
+}
+
+section.admin-bungalows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.edit-bungalows {
+  background-color: white;
+  height: fit-content;
+  width: 80vw;
+  padding: 3%;
+  margin: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  border-radius: 16px;
+}
+
+section.edit-bungalows img {
+  width: 80%;
+  border-radius: 16px;
+}
+section.edit-bungalows form {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0.4rem;
+}
+section.edit-bungalows form span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section.edit-bungalows form span.voorzieningen {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto auto auto auto auto;
+  align-items: center; /* vertically align items in the center */
+  justify-items: start; /* horizontally align items at the start */
+  align-content: start; /* vertically align grid at the start */
+  justify-content: center; /* horizontally align grid in the center */
+}
+
+section.edit-bungalows form span label {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+section.edit-bungalows hr {
+  width: 80%;
+  margin-bottom: 3%;
+}
+
+section.edit-bungalows form input[type="submit"] {
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5%;
+  transition: 0.3s;
+}
+
+section.edit-bungalows form input[type="submit"]:hover {
+  background-color: #3b3b3b;
+  padding: 5%;
+  transition: 0.3s;
+}
+
+section.edit-bungalows form input[type="text"],
+section.edit-bungalows form input[type="number"] {
+  width: 100%;
+  padding: 5%;
+  background-color: #2b2b2b;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+section.edit-bungalows form input[type="text"]:focus,
+section.edit-bungalows form input[type="number"]:focus {
+  border: none;
+}
+
+section.edit-bungalows form input[type="text"]::placeholder,
+section.edit-bungalows form input[type="number"]::placeholder {
+  color: grey;
+}
+
+.fileBtnReal {
+  display: none !important;
+}
+
+span.image {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+label#fileBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5%;
+  transition: 0.3s;
+  margin-right: 5%;
+}
+input#imagePath {
+  width: 70%;
+}
+
+section.edit-bungalows form span.voorzieningen input[type="checkbox"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  accent-color: #2b2b2b;
+  min-width: 90%;
+  min-height: 90%;
+}
+
+.new {
+  background-color: #749bba !important;
+}
+
+span.type {
+  display: flex;
+  flex-direction: row !important;
+  height: fit-content;
+  margin: auto;
+  height: 100%;
+  margin-bottom: 0%;
+}
+
+span.type input {
+  display: flex;
+  width: 50% !important;
+  height: 100%;
+}
+
+span.type input[type="radio"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  accent-color: #2b2b2b;
+  background-color: #2b2b2b;
+  height: 100%;
+}
+
+span.type select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  accent-color: white;
+  color: white;
+  background-color: #2b2b2b;
+  width: 50%;
+  margin-right: 2%;
+  border-radius: 4px;
+  height: 100%;
+}
+
+#editVoorzieningen {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: #2b2b2b3d;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100vh;
+  z-index: 900;
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 3rem;
+  padding: 1%;
+}
+
+.editVoorzieningenContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2b2b;
+  width: 30%;
+  min-height: 50%;
+  height: fit-content;
+  border-radius: 16px;
+  padding: 3%;
+}
+.editVoorzieningenContent form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+
+.editVoorzieningenContent span {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.editVoorzieningenContent form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 6%;
+  margin-right: 1%;
+  border-radius: 8px;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.editVoorzieningenContent form button {
+  color: rgb(0, 255, 0);
+}
+
+.editVoorzieningenContent form button i {
+  margin: 3%;
+}
+
+.editVoorzieningenContent form button:hover {
+  color: rgb(0, 200, 0);
+  transition: 0.3s;
+}
+
+.editVoorzieningenContent form input[type="text"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5%;
+  margin-right: 1%;
+  border-radius: 8px;
+  font-size: 1rem;
+}
